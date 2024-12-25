@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
-import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { StylistSidebarComponent } from '../../components/stylist-sidebar/stylist-sidebar.component';
 import { RouterLink } from '@angular/router';
 import { PrimaryButtonComponent } from '../../components/primary-button/primary-button.component';
 
 @Component({
-  selector: 'app-dashboard-layout',
+  selector: 'app-stylist-dashboard-layout',
   standalone: true,
-  imports: [PrimaryButtonComponent, RouterLink,CommonModule, RouterOutlet, SidebarComponent],
+  imports: [PrimaryButtonComponent, RouterLink, CommonModule, RouterOutlet, StylistSidebarComponent],
   template: `
-    <div class="min-h-screen bg-slate-50">
+    <div class="min-h-screen bg-gray-50">
     <div
       class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center"
     >
@@ -21,8 +21,8 @@ import { PrimaryButtonComponent } from '../../components/primary-button/primary-
 
       <app-primary-button label="Avatar" routerLink="/cart" />
     </div>
-      <app-sidebar #sidebar />
-      
+      <app-stylist-sidebar #sidebar />
+
       <main 
         class="transition-all duration-300 pt-[73px] p-6"
         [class.ml-64]="sidebar.isOpen"
@@ -33,4 +33,4 @@ import { PrimaryButtonComponent } from '../../components/primary-button/primary-
     </div>
   `
 })
-export class DashboardLayoutComponent {}
+export class StylistDashboardLayoutComponent {}
