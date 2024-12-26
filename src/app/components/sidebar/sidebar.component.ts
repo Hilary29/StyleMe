@@ -52,6 +52,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           <span class="truncate" [class.hidden]="!isOpen">Mes mesures</span>
         </a>
         <a
+          routerLink="/dashboard/see-availability"
+          routerLinkActive="bg-[#a013bf] text-white"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
+          [class.justify-center]="!isOpen"
+        >
+          <span>🧑‍🎨</span>
+          <span class="truncate" [class.hidden]="!isOpen">Stylistes</span>
+        </a>
+        <a
           routerLink="/dashboard/addresses"
           routerLinkActive="bg-[#a013bf] text-white"
           class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"

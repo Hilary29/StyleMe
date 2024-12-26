@@ -8,7 +8,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [CommonModule, RouterLink, RouterLinkActive],
   template: `
     <aside
-      class="bg-[#1E028C] text-white h-screen fixed left-0 shadow-lg transition-all duration-300 z-20"
+      class="bg-[#201854] text-white h-screen fixed left-0 shadow-lg transition-all duration-300 z-20"
       [class.w-64]="isOpen"
       [class.w-20]="!isOpen"
     >
@@ -45,7 +45,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a
           routerLink="/stylist-dashboard/collections"
           routerLinkActive="bg-blue-500 text-white"
-          class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-100 transition-colors"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
           [class.justify-center]="!isOpen"
         >
           <span>🛍️</span>
@@ -54,7 +54,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a
           routerLink="/stylist-dashboard/availability"
           routerLinkActive="bg-blue-500 text-white"
-          class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-100 transition-colors"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
           [class.justify-center]="!isOpen"
         >
           <span>📅</span>
@@ -63,7 +63,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a
           routerLink="/stylist-dashboard/orders"
           routerLinkActive="bg-blue-500 text-white"
-          class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-100 transition-colors"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
           [class.justify-center]="!isOpen"
         >
           <span>📦</span>
@@ -73,7 +73,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a
           routerLink="/stylist-dashboard/payments"
           routerLinkActive="bg-blue-500 text-white"
-          class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-100 transition-colors"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
           [class.justify-center]="!isOpen"
         >
           <span>💳</span>
@@ -83,13 +83,37 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <a
           routerLink="/stylist-dashboard/settings"
           routerLinkActive="bg-blue-500 text-white"
-          class="flex items-center gap-3 p-3 rounded-lg hover:bg-blue-100 transition-colors"
+          class="flex items-center gap-3 p-3 rounded-lg hover:bg-[#a013bf]/90 transition-colors"
           [class.justify-center]="!isOpen"
         >
           <span>⚙️</span>
           <span class="truncate" [class.hidden]="!isOpen">Paramètres</span>
         </a>
       </nav>
+
+      <div class=" space-y-8 pt-80">
+        <!-- Profile Section -->
+        <div class="text-center  ">
+          <div
+            class="w-12 h-12 mx-auto rounded-full bg-[#9e259a] flex items-center justify-center"
+            [class.w-12]="!isOpen"
+            [class.h-12]="!isOpen"
+            [class.w-20]="isOpen"
+            [class.h-20]="isOpen"
+          >
+            <span
+              class="text-white"
+              [class.text-2xl]="isOpen"
+              [class.text-base]="!isOpen"
+            >
+              {{ getUserInitials() }}
+            </span>
+          </div>
+          <h2 class="mt-2 font-semibold truncate" [class.hidden]="!isOpen">
+            {{ userName }}
+          </h2>
+        </div>
+      </div>
     </aside>
   `,
   styles: [

@@ -6,6 +6,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { MeasurementsComponent } from './pages/measurements/measurements.component';
 import { TrackingComponent } from './pages/tracking/tracking.component';
 import { AddressesComponent } from './pages/addresses/addresses.component';
+import { SeeAvailabilityComponent } from './pages/see-availability/see-availability.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { CartComponent } from './pages/cart/cart.component';
@@ -63,6 +64,10 @@ export const routes: Routes = [
       {
         path: 'tracking',
         component: TrackingComponent,
+      },
+      {
+        path: 'see-availability',
+        component: SeeAvailabilityComponent,
       },
       {
         path: 'addresses',

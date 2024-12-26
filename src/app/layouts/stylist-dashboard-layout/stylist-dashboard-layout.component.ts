@@ -12,16 +12,19 @@ import { PrimaryButtonComponent } from '../../components/primary-button/primary-
   imports: [PrimaryButtonComponent, RouterLink, CommonModule, RouterOutlet, StylistSidebarComponent],
   template: `
     <div class="min-h-screen bg-gray-50">
-    <div
-      class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center"
-    >
-      <button class="text-2xl" routerLink="/stylist-dashboard">
-        <img src="/StyleMe.png"/></button>
+    <div class="fixed top-0 left-0 right-0">
+      <div
+        #header
+        class=" bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center z-10"
+      >
+        <button class="text-2xl" routerLink="/stylist-dashboard">
+          <img src="/StyleMe.png" />
+        </button>
 
-
-      <app-primary-button label="Avatar" routerLink="/cart" />
-    </div>
+        <app-primary-button label="Avatar" routerLink="/cart" />
+      </div>
       <app-stylist-sidebar #sidebar />
+      </div>
 
       <main 
         class="transition-all duration-300 pt-[73px] p-6"

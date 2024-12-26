@@ -43,7 +43,7 @@ import 'swiper/css/pagination';
     }
 
     .swiper {
-      width: 70%;
+      width: 100%;
       height: 400px;
       padding: 20px 0;
       
@@ -103,6 +103,11 @@ export class FeaturedOutfitsComponent implements OnInit {
       name: 'Robe de Soirée',
       image: '/soiree-robe2.jpg',
       price: 50000
+    },
+    {
+      name: 'Tailleur Pagne',
+      image: '/respo-pagne.jpg',
+      price: 40000
     },
     {
       name: 'Tailleur Pagne',
