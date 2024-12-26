@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div class="p-4">
+    <div class="pt-16 px-32 xl:mx-[326px] mx-4 ">
       <h1 class="text-xl font-bold mb-4">Ajouter une adresse de livraison</h1>
 
-      <form (ngSubmit)="saveAddress()" class="space-y-4">
+      <form (ngSubmit)="saveAddress()" class="space-y-4 bg-white p-12 rounded-md">
         <div>
           <label for="name" class="block font-medium">Nom complet</label>
           <input

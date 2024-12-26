@@ -6,14 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="space-y-6">
+    <div class="space-y-6 pt-16 2xl:mx-[326px] mx-4">
       <h1 class="text-2xl font-bold">Suivi des commandes</h1>
 
       @for (order of activeOrders; track order.id) {
         <div class="bg-white p-6 rounded-lg shadow">
           <div class="flex justify-between items-start mb-6">
             <div>
-              <h3 class="font-semibold">Commande #{{ order.id }}</h3>
+              <h3 class="font-normal">Commande #{{ order.id }}</h3>
               <p class="text-sm text-gray-600">Expédié le {{ order.shippingDate | date:'shortDate' }}</p>
             </div>
             <span class="text-[#1E028C] font-semibold">

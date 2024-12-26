@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="space-y-6">
+    <div class="space-y-6 pt-8 2xl:mx-[326px] mx-4">
       <h1 class="text-2xl font-bold">Historique des commandes</h1>
       
       <div class="grid gap-4">
