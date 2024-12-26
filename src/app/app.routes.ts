@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { StylistDashboardLayoutComponent } from './layouts/stylist-dashboard-layout/stylist-dashboard-layout.component';
+import { DashboardHomeComponent } from './pages/dashboard-home/dashboard-home.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { MeasurementsComponent } from './pages/measurements/measurements.component';
 import { TrackingComponent } from './pages/tracking/tracking.component';
 import { AddressesComponent } from './pages/addresses/addresses.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -47,6 +49,10 @@ export const routes: Routes = [
     component: DashboardLayoutComponent,
     children: [
       {
+        path: '',
+        component: DashboardHomeComponent, // Page d'accueil du tableau de bord
+      },
+      {
         path: 'orders',
         component: OrdersComponent,
       },
@@ -62,6 +68,9 @@ export const routes: Routes = [
         path: 'addresses',
         component: AddressesComponent,
       },
+      {
+        path: 'settings',
+        component: SettingsComponent,},
       {
         path: '',
         redirectTo: 'orders',

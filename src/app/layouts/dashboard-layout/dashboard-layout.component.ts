@@ -15,7 +15,7 @@ import { PrimaryButtonComponent } from '../../components/primary-button/primary-
     <div
       class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center"
     >
-      <button class="text-2xl" routerLink="/">
+      <button class="text-2xl" routerLink="/dashboard">
         <img src="/StyleMe.png"/></button>
 
 

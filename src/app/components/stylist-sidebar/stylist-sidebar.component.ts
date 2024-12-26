@@ -15,12 +15,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <!-- Toggle Button -->
       <button
         (click)="toggleSidebar()"
-        class="absolute top-4 left-[50%] transform -translate-x-1/2 bg-[#a013bf] text-white rounded-full p-2 hover:bg-opacity-90"
+        class="absolute top-4 left-[50%] transform -translate-x-1/2  text-white rounded-full p-2 hover:bg-opacity-90"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          class="w-4 h-4"
+          class="w-6 h-6"
         >
           <path
             fill="currentColor"
@@ -111,9 +111,36 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   ],
 })
 export class StylistSidebarComponent {
+  userName = 'John Doe';
   isOpen = true;
+  isMobile = false;
+
+  constructor() {
+    // Vérifier si on est sur mobile
+    this.checkMobile();
+    window.addEventListener('resize', () => this.checkMobile());
+  }
+
+  checkMobile() {
+    this.isMobile = window.innerWidth < 768;
+    if (this.isMobile) {
+      this.isOpen = false;
+    }
+  }
 
   toggleSidebar() {
     this.isOpen = !this.isOpen;
+  }
+
+  getUserInitials(): string {
+    return this.userName
+      .split(' ')
+      .map((n) => n[0])
+      .join('')
+      .toUpperCase();
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', () => this.checkMobile());
   }
 }
