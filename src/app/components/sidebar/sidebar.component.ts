@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   template: `
     <aside
       class="bg-[#1E028C] text-white h-screen fixed left-0 shadow-lg transition-all duration-300 z-20"
-      [class.w-64]="isOpen"
+      [class.w-72]="isOpen"
       [class.w-20]="!isOpen"
     >
       <!-- Toggle Button -->
