@@ -12,7 +12,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
     PopularStylistsComponent,
     SpecialOffersComponent,FooterComponent],
   template: `
-    <section class="hero-section">
+    <section >
+      <div class="hero-section">
       <div class="hero-content">
         <h1>Découvrez votre Style</h1>
         <p>Les dernières tendances et les meilleurs stylistes réunis pour vous</p>
@@ -25,6 +26,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
         <app-popular-stylists />
         <app-special-offers />
       </div>
+      </div>
+
       <app-footer/>
     </section>
   `,

@@ -27,7 +27,7 @@ import { PrimaryButtonComponent } from '../../components/primary-button/primary-
       </div>
 
       <main 
-        class="transition-all duration-300 pt-[73px] p-6"
+        class="transition-all duration-300 pt-[73px] "
         [class.ml-64]="sidebar.isOpen"
         [class.ml-20]="!sidebar.isOpen"
       >
